@@ -6,29 +6,42 @@ A full-stack task management system built for the HMCTS DTS Developer Technical 
 
 ```
 dts-developer-challenge/
-├── backend/                 # Express.js API
-│   ├── src/
-│   │   ├── controllers/    # Request handlers
-│   │   ├── models/         # Database layer
-│   │   ├── routes/         # API routes
-│   │   ├── utils/          # Validation utilities
-│   │   └── index.js        # App entry point
+├── README.md
+├── backend/
 │   ├── package.json
+│   ├── package-lock.json
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── taskController.js
+│   │   ├── models/
+│   │   │   ├── database.js
+│   │   │   └── taskModel.js
+│   │   ├── routes/
+│   │   │   └── taskRoutes.js
+│   │   ├── utils/
+│   │   │   └── validation.js
+│   │   └── index.js
 │   └── tests/
-├── frontend/               # React + Vite app
-│   ├── src/
-│   │   ├── pages/          # Page components
-│   │   ├── services/       # API calls
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── package.json
-│   └── index.html
-└── README.md
+│       └── taskController.test.js
+└── frontend/
+    ├── package.json
+    ├── package-lock.json
+    ├── vite.config.js
+    ├── index.html
+    └── src/
+        ├── main.jsx
+        ├── App.jsx
+        ├── index.css
+        ├── pages/
+        │   ├── TaskList.jsx
+        │   └── TaskForm.jsx
+        └── services/
+            └── api.js
 ```
 
 ## Tech Stack
 
-- **Backend**: Node.js, Express, SQLite, Joi (validation)
+- **Backend**: Node.js, Express, sql.js (SQLite), Joi (validation)
 - **Frontend**: React 18, Vite, React Router
 
 ## API Endpoints
@@ -84,14 +97,14 @@ npm test
 
 ## Features Implemented
 
-- ✅ Create tasks with title, description, status, and due date
-- ✅ Retrieve tasks (all or by ID)
-- ✅ Update task status (pending/in-progress/completed)
-- ✅ Delete tasks
-- ✅ Input validation with Joi
-- ✅ Error handling
-- ✅ SQLite database storage
-- ✅ User-friendly frontend interface
+- Create tasks with title, description, status, and due date
+- Retrieve tasks (all or by ID)
+- Update task status (pending/in-progress/completed)
+- Delete tasks
+- Input validation with Joi
+- Error handling
+- SQLite database storage
+- User-friendly frontend interface
 
 ## License
 
